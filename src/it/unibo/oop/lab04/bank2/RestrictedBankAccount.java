@@ -10,7 +10,7 @@ public class RestrictedBankAccount extends AbstractBankAccount {
 
 	@Override
 	protected double computeFee() {
-		return AbstractBankAccount.MANAGEMENT_FEE + (getNTransactions() + RestrictedBankAccount.TRANSACTION_FEE);
+		return AbstractBankAccount.MANAGEMENT_FEE + (getNTransactions() * RestrictedBankAccount.TRANSACTION_FEE);
 	}
 
 	@Override
